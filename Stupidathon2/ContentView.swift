@@ -12,17 +12,17 @@ struct ContentView: View {
         NavigationStack{
             List{
                 NavigationLink{
-                    
+                    Easy_mode()
                 } label: {
                     Text("Easy mode")
                 }
                 NavigationLink{
-                    
+                    Medium_mode()
                 } label: {
                     Text("Medium mode")
                 }
                 NavigationLink{
-                    
+                    Hard_mode()
                 } label: {
                     Text("Hard mode")
                 }
