@@ -14,29 +14,19 @@ struct GameView: View {
     
     @State var size = CGSize.zero
     
-    var arr = ["galaxy", "lotsfaces", "lotsfaces2", "staticnoise"]
+    var backgroundarr = ["hard1", "hard2", "medium3", "staticnoise"]
+    
     @State var randomint: Int
     
     init() {
-        self.randomint = Int.random(in: 0..<arr.count)
+        self.randomint = Int.random(in: 0..<backgroundarr.count)
     }
     
     var body: some View {
-        
         VStack {
-            HStack {
-                Button("refresh") {
-                    randomX = CGFloat.random(in: 0..<size.width)
-                    randomY = CGFloat.random(in: 0..<size.height)
-                }
-                Button("new bg") {
-                    randomint = Int.random(in: 0..<arr.count)
-                }
-            }
-            
             ZStack {
                 GeometryReader { geom in
-                    Image(arr[randomint])
+                    Image(backgroundarr[randomint])
                         .resizable()
                         .scaledToFill()
                         .frame(width: geom.size.width, height: geom.size.height)
@@ -61,6 +51,19 @@ struct GameView: View {
                 }
             }
             .frame(width: 393, height: 759)
+            .padding(.top)
+            
+            HStack {
+                Button("refresh") {
+                    randomX = CGFloat.random(in: 0..<size.width)
+                    randomY = CGFloat.random(in: 0..<size.height)
+                }
+                .font(<#T##font: Font?##Font?#>)
+                .padding(.horizontal)
+                Button("new bg") {
+                    randomint = Int.random(in: 0..<backgroundarr.count)
+                }
+            }
         }
     }
 }
