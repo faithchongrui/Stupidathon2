@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct Easy_mode: View {
-    @State var random = arc4random_uniform(2)
+    @State var random = arc4random_uniform(5)
     var body: some View {
         NavigationStack{
             VStack{
                 Button{
-                    random = arc4random_uniform(2)
+                    random = arc4random_uniform(5)
                 } label: {
                     Text("Click to generate again")
                 }

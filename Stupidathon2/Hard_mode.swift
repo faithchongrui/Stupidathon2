@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct Hard_mode: View {
+    @State var random = arc4random_uniform(2)
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack{
+                Button{
+                    random = arc4random_uniform(2)
+                } label: {
+                    Text("Click to generate again")
+                }
+                Spacer()
+
+                 switch random {
+                     case 1:
+                       Image("hard1")
+                         .resizable()
+                         .scaledToFit()
+                     default:
+                           Image("hard2")
+                             .resizable()
+                             .scaledToFit()
+                     }
+                Spacer()
+            }
+            .navigationTitle("Medium Mode")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
