@@ -11,21 +11,32 @@ struct GameView: View {
 
     @State private var randomX = CGFloat.random(in: 0..<393)
     @State private var randomY = CGFloat.random(in: 0..<759)
-
+    
     @State var size = CGSize.zero
     
     var arr = ["galaxy", "lotsfaces", "lotsfaces2", "staticnoise"]
+    @State var randomint: Int
+    
+    init() {
+        self.randomint = Int.random(in: 0..<arr.count)
+    }
     
     var body: some View {
+        
         VStack {
-            Button("refresh") {
-                randomX = CGFloat.random(in: 0..<size.width)
-                randomY = CGFloat.random(in: 0..<size.height)
+            HStack {
+                Button("refresh") {
+                    randomX = CGFloat.random(in: 0..<size.width)
+                    randomY = CGFloat.random(in: 0..<size.height)
+                }
+                Button("new bg") {
+                    randomint = Int.random(in: 0..<arr.count)
+                }
             }
-
+            
             ZStack {
                 GeometryReader { geom in
-                    Image(arr.)
+                    Image(arr[randomint])
                         .resizable()
                         .scaledToFill()
                         .frame(width: geom.size.width, height: geom.size.height)
@@ -43,6 +54,7 @@ struct GameView: View {
                             size = geom.size
                         }
                         .onChange(of: size) { _ in
+                            
                             randomX = CGFloat.random(in: 0..<size.width)
                             randomY = CGFloat.random(in: 0..<size.height)
                         }
