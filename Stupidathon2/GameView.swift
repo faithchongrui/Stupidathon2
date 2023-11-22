@@ -14,6 +14,8 @@ struct GameView: View {
 
     @State var size = CGSize.zero
     
+    var arr = ["galaxy", "lotsfaces", "lotsfaces2", "staticnoise"]
+    
     var body: some View {
         VStack {
             Button("refresh") {
@@ -23,7 +25,7 @@ struct GameView: View {
 
             ZStack {
                 GeometryReader { geom in
-                    Image("lotsfaces")
+                    Image(arr.)
                         .resizable()
                         .scaledToFill()
                         .frame(width: geom.size.width, height: geom.size.height)
