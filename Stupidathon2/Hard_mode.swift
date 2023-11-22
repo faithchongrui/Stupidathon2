@@ -13,7 +13,7 @@ struct Hard_mode: View {
         NavigationStack{
            GameView()
         }
-        .navigationTitle("Hard Mode")
+        .navigationTitle("Hard Mode").font(Font.custom("Comic Sans MS", size: 17))
         .navigationBarTitleDisplayMode(.inline)
     }
 }

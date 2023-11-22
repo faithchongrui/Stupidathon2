@@ -25,11 +25,11 @@ struct Easy_mode: View {
                          .resizable()
                          .scaledToFit()
                      case 1:
-                       Image("Easy3")
+                       Image("easy3")
                          .resizable()
                          .scaledToFit()
                      case 2:
-                       Image("Easy4")
+                       Image("easy4")
                          .resizable()
                          .scaledToFit()
                      case 3:
