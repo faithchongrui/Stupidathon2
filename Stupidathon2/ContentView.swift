@@ -10,22 +10,29 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack{
-            List{
-                NavigationLink{
-                    Easy_mode()
-                } label: {
-                    Text("Easy mode")
+            VStack{
+                List{
+                    NavigationLink{
+                        Easy_mode()
+                    } label: {
+                        Text("Easy mode")
+                    }
+                    NavigationLink{
+                        Medium_mode()
+                    } label: {
+                        Text("Medium mode")
+                    }
+                    NavigationLink{
+                        Hard_mode()
+                    } label: {
+                        Text("Hard mode")
+                    }
                 }
-                NavigationLink{
-                    Medium_mode()
-                } label: {
-                    Text("Medium mode")
-                }
-                NavigationLink{
-                    Hard_mode()
-                } label: {
-                    Text("Hard mode")
-                }
+                Spacer()
+                Text("This is Wavin! Find him!")
+                Image("solo")
+                    .resizable()
+                    .scaledToFit()
             }
             .navigationTitle("Spot the Wavin")
         }

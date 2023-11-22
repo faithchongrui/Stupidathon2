@@ -8,13 +8,41 @@
 import SwiftUI
 
 struct Easy_mode: View {
+    @State var random = arc4random_uniform(2)
     var body: some View {
         NavigationStack{
-            Button{
-                
-            } label: {
-                Text("Click to start")
-                    
+            VStack{
+                Button{
+                    random = arc4random_uniform(2)
+                } label: {
+                    Text("Click to generate again")
+                }
+                Spacer()
+
+                 switch random {
+                     case 0:
+                       Image("galaxy")
+                         .resizable()
+                         .scaledToFit()
+                     case 1:
+                       Image("Easy3")
+                         .resizable()
+                         .scaledToFit()
+                     case 2:
+                       Image("Easy4")
+                         .resizable()
+                         .scaledToFit()
+                     case 3:
+                       Image("easy5")
+                         .resizable()
+                         .scaledToFit()
+
+                 default:
+                       Image("staticnoise")
+                         .resizable()
+                         .scaledToFit()
+                 }
+                Spacer()
             }
             .navigationTitle("Easy Mode")
             .navigationBarTitleDisplayMode(.inline)
