@@ -17,6 +17,15 @@ struct GameView: View {
     var arr = ["galaxy", "lotsfaces", "lotsfaces2", "staticnoise"]
     @State var randomint: Int
     
+    @State var timeRemaining = 300
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    @State private var showAlert = false
+    
+    func timesUp() {
+        showAlert = true
+    }
+    
     init() {
         self.randomint = Int.random(in: 0..<arr.count)
     }
@@ -25,6 +34,14 @@ struct GameView: View {
         
         VStack {
             HStack {
+                Text("Score:\(timeRemaining)")
+                    .onReceive(timer) { _ in
+                        if timeRemaining > 0 {
+                            timeRemaining -= 1
+                        } else {
+                            timesUp()
+                        }
+                    }
                 Button("refresh") {
                     randomX = CGFloat.random(in: 0..<size.width)
                     randomY = CGFloat.random(in: 0..<size.height)
@@ -58,9 +75,22 @@ struct GameView: View {
                             randomX = CGFloat.random(in: 0..<size.width)
                             randomY = CGFloat.random(in: 0..<size.height)
                         }
+                        .onTapGesture {
+                            <#code#>
+                        }
                 }
             }
             .frame(width: 393, height: 759)
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Wavin Says"),
+                  message: Text("Disappointing..."),
+                  primaryButton: .default(Text("OK"), action: {
+                  }),
+                  secondaryButton: .cancel(Text("Try Again"), action: {
+                        
+                  })
+            )
         }
     }
 }
@@ -70,3 +100,4 @@ struct GameView_Previews: PreviewProvider {
         GameView()
     }
 }
+
