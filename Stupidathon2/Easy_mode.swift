@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct Easy_mode: View {
-    @State var test = false
     @State var random = arc4random_uniform(5)
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Comic Sans MS", size: 30)!]
