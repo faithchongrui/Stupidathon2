@@ -50,7 +50,7 @@ struct GameView: View {
                         }
                 }
             }
-            .frame(width: 393, height: 759)
+            .frame(width: 370, height: 720)
             .padding(.top)
             
             HStack {
@@ -58,11 +58,17 @@ struct GameView: View {
                     randomX = CGFloat.random(in: 0..<size.width)
                     randomY = CGFloat.random(in: 0..<size.height)
                 }
-                .font(<#T##font: Font?##Font?#>)
+                .font(Font.custom("Comic Sans MS", size: 17))
+                .foregroundColor(.white)
                 .padding(.horizontal)
+                .background(.blue)
                 Button("new bg") {
                     randomint = Int.random(in: 0..<backgroundarr.count)
                 }
+                .font(Font.custom("Comic Sans MS", size: 17))
+                .foregroundColor(.white)
+                .padding(.horizontal)
+                .background(.blue)
             }
         }
     }
