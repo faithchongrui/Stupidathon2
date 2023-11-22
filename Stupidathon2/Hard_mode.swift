@@ -31,8 +31,8 @@ struct Hard_mode: View {
                      }
                 Spacer()
             }
-            .navigationTitle("Medium Mode")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Hard Mode")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
