@@ -40,7 +40,7 @@ struct Medium_mode: View {
                 Spacer()
             }
             .navigationTitle("Medium Mode")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
         }
 
     }

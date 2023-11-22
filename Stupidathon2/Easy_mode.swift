@@ -45,7 +45,7 @@ struct Easy_mode: View {
                 Spacer()
             }
             .navigationTitle("Easy Mode")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
