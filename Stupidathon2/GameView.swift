@@ -6,17 +6,29 @@
 //
 
 import SwiftUI
+import Combine
 
 struct GameView: View {
 
     @State private var randomX = CGFloat.random(in: 0..<393)
     @State private var randomY = CGFloat.random(in: 0..<759)
     
+    @State private var randomint = 0
+    
     @State var size = CGSize.zero
     
     var backgroundarr = ["hard1", "hard2", "medium3", "staticnoise"]
     
-    @State var randomint: Int
+    @State var timeRemaining = 300
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var connectedTimer: Cancellable? = nil
+    
+    @State private var showAlert = false
+    @State private var showAlert2 = false
+    
+    func timesUp() {
+        showAlert = true
+    }
     
     init() {
         self.randomint = Int.random(in: 0..<backgroundarr.count)
@@ -48,12 +60,24 @@ struct GameView: View {
                             randomX = CGFloat.random(in: 0..<size.width)
                             randomY = CGFloat.random(in: 0..<size.height)
                         }
+                        .onTapGesture {
+                            self.cancelTimer()
+                            showAlert2 = true
+                        }
                 }
             }
             .frame(width: 370, height: 720)
             .padding(.top)
             
             HStack {
+                Text("Score:\(timeRemaining)")
+                    .onReceive(timer) { _ in
+                        if timeRemaining > 0 {
+                            timeRemaining -= 1
+                        } else {
+                            timesUp()
+                        }
+                    }
                 Button("refresh") {
                     randomX = CGFloat.random(in: 0..<size.width)
                     randomY = CGFloat.random(in: 0..<size.height)
@@ -72,7 +96,48 @@ struct GameView: View {
                 .background(.blue)
             }
         }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Wavin Says"),
+                  message: Text("Disappointing..."),
+                  primaryButton: .default(Text("OK"), action: {
+                  }),
+                  secondaryButton: .cancel(Text("Try Again"), action: {
+                        reset()
+                  })
+            )
+        }
+        .alert(isPresented: $showAlert2) {
+            Alert(title: Text("Wavin Says:YOU FOUND ME"),
+                  message: Text("Score:\(timeRemaining)"),
+                  primaryButton: .default(Text("OK"), action: {
+                  }),
+                  secondaryButton: .cancel(Text("Try Again"), action: {
+                        reset()
+                  })
+            )
+        }
     }
+    
+    func reset() {
+        randomX = CGFloat.random(in: 0..<393)
+        randomY = CGFloat.random(in: 0..<759)
+        
+        randomint = Int.random(in: 0..<backgroundarr.count)
+        
+        timeRemaining = 300
+        
+        showAlert = false
+        showAlert2 = false
+    }
+        
+    func cancelTimer() {
+            self.connectedTimer?.cancel()
+            return
+        }
+    func restartTimer() {
+            self.cancelTimer()
+            return
+        }
 }
 
 struct GameView_Previews: PreviewProvider {
@@ -80,3 +145,4 @@ struct GameView_Previews: PreviewProvider {
         GameView()
     }
 }
+
