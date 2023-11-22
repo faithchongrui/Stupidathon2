@@ -8,19 +8,46 @@
 import SwiftUI
 
 struct GameView: View {
-    @State private var refresh = 0
-    let random = CGFloat.random(in: 0..<100)
+
+    @State private var randomX = CGFloat.random(in: 0..<393)
+    @State private var randomY = CGFloat.random(in: 0..<759)
+    
+    @State var size = CGSize.zero
+    
     var body: some View {
-        ZStack { 
-            Text("test")
-            Text("Current counter: \(refresh)")
-                .position(x: random, y: random)
-                   Button("refresh") {
-                       refresh += 1
-                   }
-               }
-               .font(.title)
-               .padding()
+        ZStack {
+            VStack {
+                Button("refresh") {
+                    randomX = CGFloat.random(in: 0..<size.width)
+                    randomY = CGFloat.random(in: 0..<size.height)
+                }
+
+                ZStack {
+                    GeometryReader { geom in
+                        Color.red.opacity(0.001)
+                        Image("solo")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .position(x: randomX, y: randomY)
+                            .onAppear {
+                                size = geom.size
+                            }
+                            .onChange(of: geom.size) { _ in
+                                size = geom.size
+                            }
+                            .onChange(of: size) { _ in
+                                randomX = CGFloat.random(in: 0..<size.width)
+                                randomY = CGFloat.random(in: 0..<size.height)
+                            }
+                    }
+                }
+                .background {
+                    Image("lotsfaces")
+                        .resizable()
+                        .scaledToFill()
+                }
+            }
+        }
     }
 }
 
