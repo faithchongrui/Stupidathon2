@@ -10,6 +10,9 @@ import Combine
 
 struct Easy_mode: View {
     @State var random = arc4random_uniform(5)
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Comic Sans MS", size: 30)!]
+    }
     var body: some View {
         NavigationStack{
             VStack{
@@ -17,6 +20,7 @@ struct Easy_mode: View {
                     random = arc4random_uniform(5)
                 } label: {
                     Text("Click to generate again")
+                        .font(Font.custom("Comic Sans MS", size: 17))
                 }
                 Spacer()
 

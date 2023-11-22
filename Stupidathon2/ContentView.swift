@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var rotation: Angle = .degrees(60)
+    @State var moveDown = 0
+    
     init() {
-        
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Comic Sans MS", size: 30)!]
     }
     
     var body: some View {
@@ -41,10 +45,21 @@ struct ContentView: View {
                 Image("solo")
                     .resizable()
                     .scaledToFit()
+                    .onAppear {
+                        withAnimation(.easeInOut(duration: 6)) {
+                            rotation = Angle(degrees: 360 * 4)
+                            moveDown = 1000
+                        }
+                    }
+                    .onDisappear {
+                        rotation = .zero
+                        moveDown = 0
+                    }
+                    .rotationEffect(rotation)
+                    .offset(x: 0, y: CGFloat(moveDown))
             }
             .navigationTitle(
-                Text("Spot the Wavin")
-                    .font(Font.custom("Comic Sans MS", size: 17))
+                Text("Spot the Wavin").font(.headline)
             )
         }
     }
