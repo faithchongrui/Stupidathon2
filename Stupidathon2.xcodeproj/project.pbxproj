@@ -7,27 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		200CC2062B0D977600A36C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200CC2052B0D977600A36C4C /* AppDelegate.swift */; };
-		200CC2082B0D977600A36C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200CC2072B0D977600A36C4C /* SceneDelegate.swift */; };
-		200CC20A2B0D977600A36C4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200CC2092B0D977600A36C4C /* ViewController.swift */; };
-		200CC20D2B0D977600A36C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200CC20B2B0D977600A36C4C /* Main.storyboard */; };
-		200CC20F2B0D977800A36C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200CC20E2B0D977800A36C4C /* Assets.xcassets */; };
-		200CC2122B0D977800A36C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200CC2102B0D977800A36C4C /* LaunchScreen.storyboard */; };
+		2027AE4F2B0D9950005497B3 /* Stupidathon2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027AE4E2B0D9950005497B3 /* Stupidathon2App.swift */; };
+		2027AE512B0D9950005497B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027AE502B0D9950005497B3 /* ContentView.swift */; };
+		2027AE532B0D9952005497B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2027AE522B0D9952005497B3 /* Assets.xcassets */; };
+		2027AE562B0D9952005497B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2027AE552B0D9952005497B3 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		200CC2022B0D977600A36C4C /* Stupidathon v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stupidathon v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		200CC2052B0D977600A36C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		200CC2072B0D977600A36C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		200CC2092B0D977600A36C4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		200CC20C2B0D977600A36C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		200CC20E2B0D977800A36C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		200CC2112B0D977800A36C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		200CC2132B0D977800A36C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2027AE4B2B0D9950005497B3 /* Stupidathon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stupidathon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2027AE4E2B0D9950005497B3 /* Stupidathon2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stupidathon2App.swift; sourceTree = "<group>"; };
+		2027AE502B0D9950005497B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2027AE522B0D9952005497B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2027AE552B0D9952005497B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		200CC1FF2B0D977600A36C4C /* Frameworks */ = {
+		2027AE482B0D9950005497B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +32,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		200CC1F92B0D977600A36C4C = {
+		2027AE422B0D9950005497B3 = {
 			isa = PBXGroup;
 			children = (
-				200CC2042B0D977600A36C4C /* Stupidathon v2 */,
-				200CC2032B0D977600A36C4C /* Products */,
+				2027AE4D2B0D9950005497B3 /* Stupidathon2 */,
+				2027AE4C2B0D9950005497B3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		200CC2032B0D977600A36C4C /* Products */ = {
+		2027AE4C2B0D9950005497B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				200CC2022B0D977600A36C4C /* Stupidathon v2.app */,
+				2027AE4B2B0D9950005497B3 /* Stupidathon2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		200CC2042B0D977600A36C4C /* Stupidathon v2 */ = {
+		2027AE4D2B0D9950005497B3 /* Stupidathon2 */ = {
 			isa = PBXGroup;
 			children = (
-				200CC2052B0D977600A36C4C /* AppDelegate.swift */,
-				200CC2072B0D977600A36C4C /* SceneDelegate.swift */,
-				200CC2092B0D977600A36C4C /* ViewController.swift */,
-				200CC20B2B0D977600A36C4C /* Main.storyboard */,
-				200CC20E2B0D977800A36C4C /* Assets.xcassets */,
-				200CC2102B0D977800A36C4C /* LaunchScreen.storyboard */,
-				200CC2132B0D977800A36C4C /* Info.plist */,
+				2027AE4E2B0D9950005497B3 /* Stupidathon2App.swift */,
+				2027AE502B0D9950005497B3 /* ContentView.swift */,
+				2027AE522B0D9952005497B3 /* Assets.xcassets */,
+				2027AE542B0D9952005497B3 /* Preview Content */,
 			);
-			path = "Stupidathon v2";
+			path = Stupidathon2;
+			sourceTree = "<group>";
+		};
+		2027AE542B0D9952005497B3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2027AE552B0D9952005497B3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		200CC2012B0D977600A36C4C /* Stupidathon v2 */ = {
+		2027AE4A2B0D9950005497B3 /* Stupidathon2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 200CC2162B0D977800A36C4C /* Build configuration list for PBXNativeTarget "Stupidathon v2" */;
+			buildConfigurationList = 2027AE592B0D9952005497B3 /* Build configuration list for PBXNativeTarget "Stupidathon2" */;
 			buildPhases = (
-				200CC1FE2B0D977600A36C4C /* Sources */,
-				200CC1FF2B0D977600A36C4C /* Frameworks */,
-				200CC2002B0D977600A36C4C /* Resources */,
+				2027AE472B0D9950005497B3 /* Sources */,
+				2027AE482B0D9950005497B3 /* Frameworks */,
+				2027AE492B0D9950005497B3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Stupidathon v2";
-			productName = "Stupidathon v2";
-			productReference = 200CC2022B0D977600A36C4C /* Stupidathon v2.app */;
+			name = Stupidathon2;
+			productName = Stupidathon2;
+			productReference = 2027AE4B2B0D9950005497B3 /* Stupidathon2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		200CC1FA2B0D977600A36C4C /* Project object */ = {
+		2027AE432B0D9950005497B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					200CC2012B0D977600A36C4C = {
+					2027AE4A2B0D9950005497B3 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 200CC1FD2B0D977600A36C4C /* Build configuration list for PBXProject "Stupidathon v2" */;
+			buildConfigurationList = 2027AE462B0D9950005497B3 /* Build configuration list for PBXProject "Stupidathon2" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,63 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 200CC1F92B0D977600A36C4C;
-			productRefGroup = 200CC2032B0D977600A36C4C /* Products */;
+			mainGroup = 2027AE422B0D9950005497B3;
+			productRefGroup = 2027AE4C2B0D9950005497B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				200CC2012B0D977600A36C4C /* Stupidathon v2 */,
+				2027AE4A2B0D9950005497B3 /* Stupidathon2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		200CC2002B0D977600A36C4C /* Resources */ = {
+		2027AE492B0D9950005497B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				200CC2122B0D977800A36C4C /* LaunchScreen.storyboard in Resources */,
-				200CC20F2B0D977800A36C4C /* Assets.xcassets in Resources */,
-				200CC20D2B0D977600A36C4C /* Main.storyboard in Resources */,
+				2027AE562B0D9952005497B3 /* Preview Assets.xcassets in Resources */,
+				2027AE532B0D9952005497B3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		200CC1FE2B0D977600A36C4C /* Sources */ = {
+		2027AE472B0D9950005497B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				200CC20A2B0D977600A36C4C /* ViewController.swift in Sources */,
-				200CC2062B0D977600A36C4C /* AppDelegate.swift in Sources */,
-				200CC2082B0D977600A36C4C /* SceneDelegate.swift in Sources */,
+				2027AE512B0D9950005497B3 /* ContentView.swift in Sources */,
+				2027AE4F2B0D9950005497B3 /* Stupidathon2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		200CC20B2B0D977600A36C4C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				200CC20C2B0D977600A36C4C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		200CC2102B0D977800A36C4C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				200CC2112B0D977800A36C4C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		200CC2142B0D977800A36C4C /* Debug */ = {
+		2027AE572B0D9952005497B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		200CC2152B0D977800A36C4C /* Release */ = {
+		2027AE582B0D9952005497B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,19 +259,20 @@
 			};
 			name = Release;
 		};
-		200CC2172B0D977800A36C4C /* Debug */ = {
+		2027AE5A2B0D9952005497B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stupidathon2/Preview Content\"";
 				DEVELOPMENT_TEAM = V54B28UN5Q;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Stupidathon v2/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -300,7 +280,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Faith.Stupidathon-v2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Faith.Stupidathon2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -308,19 +288,20 @@
 			};
 			name = Debug;
 		};
-		200CC2182B0D977800A36C4C /* Release */ = {
+		2027AE5B2B0D9952005497B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stupidathon2/Preview Content\"";
 				DEVELOPMENT_TEAM = V54B28UN5Q;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Stupidathon v2/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -328,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Faith.Stupidathon-v2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Faith.Stupidathon2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,25 +320,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		200CC1FD2B0D977600A36C4C /* Build configuration list for PBXProject "Stupidathon v2" */ = {
+		2027AE462B0D9950005497B3 /* Build configuration list for PBXProject "Stupidathon2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				200CC2142B0D977800A36C4C /* Debug */,
-				200CC2152B0D977800A36C4C /* Release */,
+				2027AE572B0D9952005497B3 /* Debug */,
+				2027AE582B0D9952005497B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		200CC2162B0D977800A36C4C /* Build configuration list for PBXNativeTarget "Stupidathon v2" */ = {
+		2027AE592B0D9952005497B3 /* Build configuration list for PBXNativeTarget "Stupidathon2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				200CC2172B0D977800A36C4C /* Debug */,
-				200CC2182B0D977800A36C4C /* Release */,
+				2027AE5A2B0D9952005497B3 /* Debug */,
+				2027AE5B2B0D9952005497B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 200CC1FA2B0D977600A36C4C /* Project object */;
+	rootObject = 2027AE432B0D9950005497B3 /* Project object */;
 }
