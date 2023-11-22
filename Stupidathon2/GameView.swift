@@ -57,6 +57,7 @@ struct GameView: View {
                 Button("refresh") {
                     randomX = CGFloat.random(in: 0..<size.width)
                     randomY = CGFloat.random(in: 0..<size.height)
+                    randomint = Int.random(in: 0..<backgroundarr.count)
                 }
                 .font(Font.custom("Comic Sans MS", size: 17))
                 .foregroundColor(.white)

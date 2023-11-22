@@ -9,11 +9,14 @@ import SwiftUI
 
 struct Hard_mode: View {
     @State var random = arc4random_uniform(2)
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Comic Sans MS", size: 30)!]
+    }
     var body: some View {
         NavigationStack{
            GameView()
         }
-        .navigationTitle("Hard Mode").font(Font.custom("Comic Sans MS", size: 17))
+        .navigationTitle("Hard Mode")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
